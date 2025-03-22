@@ -20,6 +20,7 @@ export function ProjectCarousel({ projects }: ProjectCarouselProps) {
   const [currentPage, setCurrentPage] = useState(0)
   const projectsPerPage = 3
   const totalPages = Math.ceil(projects.length / projectsPerPage)
+  const [expandedDescriptions, setExpandedDescriptions] = useState<Record<number, boolean>>({})
 
   const nextPage = () => {
     setCurrentPage((prev) => (prev + 1) % totalPages)
@@ -27,6 +28,13 @@ export function ProjectCarousel({ projects }: ProjectCarouselProps) {
 
   const prevPage = () => {
     setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages)
+  }
+
+  const toggleDescription = (index: number) => {
+    setExpandedDescriptions((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }))
   }
 
   // Get current projects to display
@@ -48,7 +56,24 @@ export function ProjectCarousel({ projects }: ProjectCarouselProps) {
             </div>
             <div className="p-4">
               <h3 className="font-medium mb-2">{project.title}</h3>
-              <p className="text-sm text-[#525252] mb-4">{project.description}</p>
+
+              <div className="min-h-[3em]">
+                {expandedDescriptions[index] ? (
+                  <p className="text-sm text-[#525252] transition-all duration-300">{project.description}</p>
+                ) : (
+                  <p className="text-sm text-[#525252] line-clamp-2 transition-all duration-300">
+                    {project.description}
+                  </p>
+                )}
+              </div>
+
+              <button
+                onClick={() => toggleDescription(index)}
+                className="text-xs text-[#525252] hover:text-black mt-1 mb-3"
+              >
+                {expandedDescriptions[index] ? "Read less" : "Read more"}
+              </button>
+
               <Link href={project.codeUrl} className="flex items-center text-sm font-medium">
                 <Github className="w-4 h-4 mr-1" /> View Code
               </Link>

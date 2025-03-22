@@ -8,7 +8,7 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="flex items-center justify-between px-6 py-4 border-b border-[#e5e5e5]">
-        <div className="text-lg font-medium">John Doe</div>
+        <div className="text-lg font-medium">Portfolio</div>
         <nav className="hidden md:flex space-x-6">
           <Link href="#about" className="text-sm hover:text-[#525252]">
             About
@@ -36,13 +36,13 @@ export default function Home() {
       <main className="container mx-auto px-6">
         {/* Hero Section */}
         <section className="py-16 md:py-24 flex flex-col md:flex-row items-center md:items-start gap-8">
-          <div className="w-32 h-32 md:w-40 md:h-40 flex-shrink-0">
+          <div className="w-32 h-32 md:w-40 md:h-40 flex-shrink-0 rounded-full overflow-hidden">
             <Image
-              src="/placeholder.svg?height=160&width=160"
+              src="/Foto.JPG"
               alt="Profile Avatar"
               width={160}
               height={160}
-              className="rounded-full"
+              className="w-full h-full object-cover object-[55%_10%]"
             />
           </div>
           <div className="flex flex-col items-center md:items-start">
@@ -118,44 +118,37 @@ export default function Home() {
           <ProjectCarousel
             projects={[
               {
-                title: "E-Commerce Platform",
-                description: "A full-stack e-commerce solution built with React and Node.js",
+                title: "Hate Speech Detection",
+                description:
+                  "A Python-based AI project leveraging scikit-learn and Gradio to detect hate speech in text data. Collaborated with a team to preprocess unstructured Kaggle data (cleaning, tokenization, normalization) and trained models to achieve 80-90% accuracy. Explored NLP techniques like TF-IDF vectorization and experimented with classifiers, which deepened my understanding of AI workflows and data preprocessing challenges.",
                 imageUrl: "/placeholder.svg?height=160&width=300",
                 codeUrl: "#",
               },
               {
-                title: "AI Chat Application",
-                description: "Real-time chat app with AI integration using Socket.io",
+                title: "Comparing Hate Speech Detection Models (ICSET Paper)",
+                description:
+                  "Co-authored a research paper comparing machine learning models (SVM, Random Forest, Logistic Regression, etc.) trained on original vs. translated Indonesian hate speech datasets. Published findings at ICSET, gaining experience in academic writing and cross-lingual AI challenges.",
                 imageUrl: "/placeholder.svg?height=160&width=300",
                 codeUrl: "#",
               },
               {
-                title: "Portfolio Website",
-                description: "Personal portfolio built with modern web technologies",
+                title: "Immunify (Vaccination App)",
+                description:
+                  "Developed a React Native mobile app to streamline vaccination tracking for parents, with features like vaccine scheduling, reminders, and child profile management. Led UI/UX design using Figma and implemented the frontend, integrating Firebase for backend services (authentication, cloud storage). This projects help me deepen my understanding on mobile development.",
                 imageUrl: "/placeholder.svg?height=160&width=300",
                 codeUrl: "#",
               },
               {
-                title: "Task Management App",
-                description: "A productivity app with drag-and-drop interface",
+                title: "Garbage Classification (Computer Vision)",
+                description:
+                  "Built a PyTorch-powered image classifier using a ResNet50 architecture to categorize waste into types like metal, glass, and plastic. Transitioned from traditional ML approaches (which underperformed) to deep learning, achieving 90% accuracy. This project helps me to gain hands-on experience with convolutional neural networks and computer vision workflows.",
                 imageUrl: "/placeholder.svg?height=160&width=300",
                 codeUrl: "#",
               },
               {
-                title: "Weather Dashboard",
-                description: "Real-time weather data visualization using APIs",
-                imageUrl: "/placeholder.svg?height=160&width=300",
-                codeUrl: "#",
-              },
-              {
-                title: "Social Media Analytics",
-                description: "Data visualization dashboard for social media metrics",
-                imageUrl: "/placeholder.svg?height=160&width=300",
-                codeUrl: "#",
-              },
-              {
-                title: "Social Media Analytics",
-                description: "Data visualization dashboard for social media metrics",
+                title: "Financial Data Cluster Analysis",
+                description:
+                  "Used R to perform cluster analysis on banking data, aiming to segment customers based on term deposit subscription patterns. Transformed classification data into clusters by isolating “yes/no” subsets, uncovering insights like demographic preferences and financial behavior trends. With it finally delivering actionable recommendations for targeted marketing campaigns.",
                 imageUrl: "/placeholder.svg?height=160&width=300",
                 codeUrl: "#",
               },
