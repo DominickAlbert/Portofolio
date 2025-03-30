@@ -35,7 +35,7 @@ export default function Home() {
         <section className="py-16 md:py-24 flex flex-col md:flex-row items-center md:items-start gap-8">
           <div className="w-32 h-32 md:w-40 md:h-40 flex-shrink-0 rounded-full overflow-hidden">
             <Image
-              src="/Foto.JPG"
+              src="/Portofolio/Foto.JPG"
               alt="Profile Avatar"
               width={160}
               height={160}
@@ -122,35 +122,35 @@ export default function Home() {
                 title: "Hate Speech Detection",
                 description:
                   "A Python-based AI project leveraging scikit-learn and Gradio to detect hate speech in text data. Collaborated with a team to preprocess unstructured Kaggle data (cleaning, tokenization, normalization) and trained models to achieve 80-90% accuracy. Explored NLP techniques like TF-IDF vectorization and experimented with classifiers, which deepened my understanding of AI workflows and data preprocessing challenges.",
-                imageUrl: "/HateSpeechClas.jpg",
+                imageUrl: "/Portofolio/HateSpeechClas.jpg",
                 codeUrl: "#",
               },
               {
                 title: "Comparing Hate Speech Detection Models (ICSET Paper)",
                 description:
                   "Co-authored a research paper comparing machine learning models (SVM, Random Forest, Logistic Regression, etc.) trained on original vs. translated Indonesian hate speech datasets. Published findings at ICSET, gaining experience in academic writing and cross-lingual AI challenges.",
-                imageUrl: "/IEEE.jpg",
+                imageUrl: "/Portofolio/IEEE.jpg",
                 codeUrl: "https://github.com/DominickAlbert/Research-Method",
               },
               {
                 title: "Immunify (Vaccination App)",
                 description:
                   "Developed a React Native mobile app to streamline vaccination tracking for parents, with features like vaccine scheduling, reminders, and child profile management. Led UI/UX design using Figma and implemented the frontend, integrating Firebase for backend services (authentication, cloud storage). This projects help me deepen my understanding on mobile development.",
-                imageUrl: "/Immunify.png",
+                imageUrl: "/Portofolio/Immunify.png",
                 codeUrl: "https://github.com/Eralf/Immunify",
               },
               {
                 title: "Garbage Classification (Computer Vision)",
                 description:
                   "Built a PyTorch-powered image classifier using a ResNet50 architecture to categorize waste into types like metal, glass, and plastic. Transitioned from traditional ML approaches (which underperformed) to deep learning, achieving 90% accuracy. This project helps me to gain hands-on experience with convolutional neural networks and computer vision workflows.",
-                imageUrl: "/GarbageClassifcation.png",
+                imageUrl: "/Portofolio/GarbageClassifcation.png",
                 codeUrl: "https://github.com/DominickAlbert/ComputerVision",
               },
               {
                 title: "Financial Data Cluster Analysis",
                 description:
                   "Used R to perform cluster analysis on banking data, aiming to segment customers based on term deposit subscription patterns. Transformed classification data into clusters by isolating “yes/no” subsets, uncovering insights like demographic preferences and financial behavior trends. With it finally delivering actionable recommendations for targeted marketing campaigns.",
-                imageUrl: "/ClusterAnalysis.jpg",
+                imageUrl: "/Portofolio/ClusterAnalysis.jpg",
                 codeUrl: "https://github.com/DominickAlbert/DataMining",
               },
             ]}
