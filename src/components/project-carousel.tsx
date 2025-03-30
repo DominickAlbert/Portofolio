@@ -4,6 +4,7 @@ import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { ChevronLeft, ChevronRight, Github } from "lucide-react"
+import { ImageModal } from "./image-modal"
 
 interface Project {
   title: string
@@ -21,6 +22,8 @@ export function ProjectCarousel({ projects }: ProjectCarouselProps) {
   const projectsPerPage = 3
   const totalPages = Math.ceil(projects.length / projectsPerPage)
   const [expandedDescriptions, setExpandedDescriptions] = useState<Record<number, boolean>>({})
+  const [modalOpen, setModalOpen] = useState(false)
+  const [selectedImage, setSelectedImage] = useState({ url: "", alt: "" })
 
   const nextPage = () => {
     setCurrentPage((prev) => (prev + 1) % totalPages)
@@ -37,6 +40,11 @@ export function ProjectCarousel({ projects }: ProjectCarouselProps) {
     }))
   }
 
+  const openImageModal = (imageUrl: string, title: string) => {
+    setSelectedImage({ url: imageUrl, alt: title })
+    setModalOpen(true)
+  }
+
   // Get current projects to display
   const currentProjects = projects.slice(currentPage * projectsPerPage, (currentPage + 1) * projectsPerPage)
 
@@ -45,35 +53,31 @@ export function ProjectCarousel({ projects }: ProjectCarouselProps) {
       <div className="grid md:grid-cols-3 gap-6">
         {currentProjects.map((project, index) => (
           <div key={index} className="border border-[#e5e5e5] rounded-md overflow-hidden">
-            <div className="h-40 bg-[#e5e7eb] flex items-center justify-center">
+            <div
+              className="h-40 bg-[#e5e7eb] flex items-center justify-center cursor-pointer overflow-hidden"
+              onClick={() => openImageModal(project.imageUrl, project.title)}
+            >
               <Image
                 src={project.imageUrl || "/placeholder.svg"}
                 alt={project.title}
                 width={300}
                 height={160}
-                className="object-cover w-full h-full"
+                className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
               />
             </div>
             <div className="p-4">
               <h3 className="font-medium mb-2">{project.title}</h3>
-
-              <div className="min-h-[3em]">
-                {expandedDescriptions[index] ? (
-                  <p className="text-sm text-[#525252] transition-all duration-300">{project.description}</p>
-                ) : (
-                  <p className="text-sm text-[#525252] line-clamp-2 transition-all duration-300">
-                    {project.description}
-                  </p>
-                )}
+              <div
+                className={`transition-all duration-300 overflow-hidden ${expandedDescriptions[index] ? "max-h-60" : "max-h-12"}`}
+              >
+                <p className="text-sm text-[#525252]">{project.description}</p>
               </div>
-
               <button
                 onClick={() => toggleDescription(index)}
                 className="text-xs text-[#525252] hover:text-black mt-1 mb-3"
               >
                 {expandedDescriptions[index] ? "Read less" : "Read more"}
               </button>
-
               <Link href={project.codeUrl} className="flex items-center text-sm font-medium">
                 <Github className="w-4 h-4 mr-1" /> View Code
               </Link>
@@ -111,6 +115,14 @@ export function ProjectCarousel({ projects }: ProjectCarouselProps) {
           </button>
         </div>
       )}
+
+      {/* Image Modal */}
+      <ImageModal
+        isOpen={modalOpen}
+        imageUrl={selectedImage.url}
+        altText={selectedImage.alt}
+        onClose={() => setModalOpen(false)}
+      />
     </div>
   )
 }

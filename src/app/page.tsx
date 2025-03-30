@@ -21,14 +21,11 @@ export default function Home() {
           </Link>
         </nav>
         <div className="flex items-center space-x-4">
-          <Link href="https://github.com" target="_blank" aria-label="GitHub">
+          <Link href="https://github.com/DominickAlbert" target="_blank" aria-label="GitHub">
             <Github className="w-5 h-5" />
           </Link>
-          <Link href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+          <Link href="https://www.linkedin.com/in/dominick-albert-setiawan-3a93b61ba/" target="_blank" aria-label="LinkedIn">
             <Linkedin className="w-5 h-5" />
-          </Link>
-          <Link href="#" aria-label="Help">
-            <HelpCircle className="w-5 h-5" />
           </Link>
         </div>
       </header>
@@ -65,7 +62,7 @@ export default function Home() {
             <div>
               <h3 className="font-medium mb-4">Background</h3>
               <p className="text-sm text-[#525252] leading-relaxed">
-                A computer science major passionate about AI technologies to solve complex real-world challenges. My
+                A computer science major passionate about AI technologies to solve real-world challenges. My
                 journey into AI began with exploring machine learning algorithms and their applications in areas like
                 natural language processing and computer vision. I'm currently building expertise in Python, TensorFlow,
                 and data analysis while deepening my understanding of core concepts like deep learning and reinforcement
@@ -77,6 +74,10 @@ export default function Home() {
                 <p className="font-medium">Bina Nusantara University</p>
                 <p className="text-sm text-[#525252]">2022 - 2026</p>
               </div>
+              <div>
+                <p className="font-medium">Xi’an Jiaotong-Liverpool University | Exchange Student</p>
+                <p className="text-sm text-[#525252]">Feb 2025 - Jun 2025</p>
+              </div>
             </div>
 
             <div>
@@ -85,26 +86,26 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-8">
                 <div className="flex flex-col items-center">
                   <Code className="w-8 h-8 mb-2" />
-                  <h4 className="font-medium mb-2">Languages</h4>
-                  <p className="text-sm text-center text-[#525252]">C, Java, R</p>
+                  <h4 className="font-medium mb-2">Soft Skill</h4>
+                  <p className="text-sm text-center text-[#525252]">Communication, Teamwork</p>
                 </div>
 
                 <div className="flex flex-col items-center">
                   <Server className="w-8 h-8 mb-2" />
-                  <h4 className="font-medium mb-2">Backend</h4>
-                  <p className="text-sm text-center text-[#525252]">Python, SQL</p>
+                  <h4 className="font-medium mb-2">Languages</h4>
+                  <p className="text-sm text-center text-[#525252]">C, Java, R, Python, SQL</p>
                 </div>
 
                 <div className="flex flex-col items-center">
                   <Cloud className="w-8 h-8 mb-2" />
                   <h4 className="font-medium mb-2">Cloud</h4>
-                  <p className="text-sm text-center text-[#525252]">AWS</p>
+                  <p className="text-sm text-center text-[#525252]">Alibaba CCA</p>
                 </div>
 
                 <div className="flex flex-col items-center">
                   <Smartphone className="w-8 h-8 mb-2" />
                   <h4 className="font-medium mb-2">Mobile</h4>
-                  <p className="text-sm text-center text-[#525252]">React Native, Flutter</p>
+                  <p className="text-sm text-center text-[#525252]">React Native (Basic)</p>
                 </div>
               </div>
             </div>
@@ -121,36 +122,36 @@ export default function Home() {
                 title: "Hate Speech Detection",
                 description:
                   "A Python-based AI project leveraging scikit-learn and Gradio to detect hate speech in text data. Collaborated with a team to preprocess unstructured Kaggle data (cleaning, tokenization, normalization) and trained models to achieve 80-90% accuracy. Explored NLP techniques like TF-IDF vectorization and experimented with classifiers, which deepened my understanding of AI workflows and data preprocessing challenges.",
-                imageUrl: "/placeholder.svg?height=160&width=300",
+                imageUrl: "/HateSpeechClas.jpg",
                 codeUrl: "#",
               },
               {
                 title: "Comparing Hate Speech Detection Models (ICSET Paper)",
                 description:
                   "Co-authored a research paper comparing machine learning models (SVM, Random Forest, Logistic Regression, etc.) trained on original vs. translated Indonesian hate speech datasets. Published findings at ICSET, gaining experience in academic writing and cross-lingual AI challenges.",
-                imageUrl: "/placeholder.svg?height=160&width=300",
-                codeUrl: "#",
+                imageUrl: "/IEEE.jpg",
+                codeUrl: "https://github.com/DominickAlbert/Research-Method",
               },
               {
                 title: "Immunify (Vaccination App)",
                 description:
                   "Developed a React Native mobile app to streamline vaccination tracking for parents, with features like vaccine scheduling, reminders, and child profile management. Led UI/UX design using Figma and implemented the frontend, integrating Firebase for backend services (authentication, cloud storage). This projects help me deepen my understanding on mobile development.",
-                imageUrl: "/placeholder.svg?height=160&width=300",
-                codeUrl: "#",
+                imageUrl: "/Immunify.png",
+                codeUrl: "https://github.com/Eralf/Immunify",
               },
               {
                 title: "Garbage Classification (Computer Vision)",
                 description:
                   "Built a PyTorch-powered image classifier using a ResNet50 architecture to categorize waste into types like metal, glass, and plastic. Transitioned from traditional ML approaches (which underperformed) to deep learning, achieving 90% accuracy. This project helps me to gain hands-on experience with convolutional neural networks and computer vision workflows.",
-                imageUrl: "/placeholder.svg?height=160&width=300",
-                codeUrl: "#",
+                imageUrl: "/GarbageClassifcation.png",
+                codeUrl: "https://github.com/DominickAlbert/ComputerVision",
               },
               {
                 title: "Financial Data Cluster Analysis",
                 description:
                   "Used R to perform cluster analysis on banking data, aiming to segment customers based on term deposit subscription patterns. Transformed classification data into clusters by isolating “yes/no” subsets, uncovering insights like demographic preferences and financial behavior trends. With it finally delivering actionable recommendations for targeted marketing campaigns.",
-                imageUrl: "/placeholder.svg?height=160&width=300",
-                codeUrl: "#",
+                imageUrl: "/ClusterAnalysis.jpg",
+                codeUrl: "https://github.com/DominickAlbert/DataMining",
               },
             ]}
           />
@@ -176,8 +177,10 @@ export default function Home() {
                 <Linkedin className="w-5 h-5" />
               </div>
               <div>
-                <p className="text-sm font-medium">LinkedIn</p>
-                <p className="text-sm text-[#525252]">Dominick Albert Setiawan</p>
+                <a href="https://www.linkedin.com/in/dominick-albert-setiawan-3a93b61ba/">
+                  <p className="text-sm font-medium">LinkedIn</p>
+                  <p className="text-sm text-[#525252]">Dominick Albert Setiawan</p>
+                </a>
               </div>
             </div>
           </div>
@@ -186,8 +189,8 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="py-8 text-center text-sm text-[#525252] border-t border-[#e5e5e5] mt-12">
-        <p>© 2025 John Doe. All rights reserved.</p>
-        <p className="mt-1">This website was created with the help of AI technology</p>
+        <p>© 2025 Dominick Albert Setiawan</p>
+        <p className="mt-1">Thank you for visiting</p>
       </footer>
     </div>
   )
