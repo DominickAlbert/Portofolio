@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Github, Linkedin, HelpCircle, Download, Server, Code, Cloud, Smartphone } from "lucide-react"
+import { Github, Linkedin, Download, Server, Code, Cloud, Smartphone } from "lucide-react"
 import { ProjectCarousel } from "@/components/project-carousel"
 
 export default function Home() {
@@ -43,7 +43,7 @@ export default function Home() {
             />
           </div>
           <div className="flex flex-col items-center md:items-start">
-            <h1 className="text-2xl md:text-3xl font-bold mb-2">Hi, I'm Dominick Albert Setiawan</h1>
+            <h1 className="text-2xl md:text-3xl font-bold mb-2">Hi, I&apos;m Dominick Albert Setiawan</h1>
             <p className="text-[#525252] mb-6">Undergraduate Computer Science Student | AI Enthusiast</p>
             <Link
               href="#"
@@ -64,7 +64,7 @@ export default function Home() {
               <p className="text-sm text-[#525252] leading-relaxed">
                 A computer science major passionate about AI technologies to solve real-world challenges. My
                 journey into AI began with exploring machine learning algorithms and their applications in areas like
-                natural language processing and computer vision. I'm currently building expertise in Python, TensorFlow,
+                natural language processing and computer vision. I&apos;m currently building expertise in Python, TensorFlow,
                 and data analysis while deepening my understanding of core concepts like deep learning and reinforcement
                 learning.
               </p>
