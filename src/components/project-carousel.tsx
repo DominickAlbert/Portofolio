@@ -67,10 +67,14 @@ export function ProjectCarousel({ projects }: ProjectCarouselProps) {
             </div>
             <div className="p-4">
               <h3 className="font-medium mb-2">{project.title}</h3>
-              <div
-                className={`transition-all duration-300 overflow-hidden ${expandedDescriptions[index] ? "max-h-60" : "max-h-12"}`}
-              >
-                <p className="text-sm text-[#525252]">{project.description}</p>
+              <div className="min-h-[3em]">
+                {expandedDescriptions[index] ? (
+                  <p className="text-sm text-[#525252] transition-all duration-300">{project.description}</p>
+                ) : (
+                  <p className="text-sm text-[#525252] line-clamp-2 transition-all duration-300">
+                    {project.description}
+                  </p>
+                )}
               </div>
               <button
                 onClick={() => toggleDescription(index)}

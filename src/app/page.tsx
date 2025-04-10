@@ -168,7 +168,7 @@ export default function Home() {
               </div>
               <div>
                 <p className="text-sm font-medium">Email</p>
-                <p className="text-sm text-[#525252]">dominickalbert@gmail.com</p>
+                <p className="text-sm text-[#525252]">dominickalberd@gmail.com</p>
               </div>
             </div>
 
